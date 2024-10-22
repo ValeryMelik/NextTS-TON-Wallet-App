@@ -1,0 +1,81 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.wallet,
+.transactions {
+  padding: 20px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+  }
+
+  &__body {
+    max-width: 100%;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #1d3c6d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease-in-out;
+
+    &_back {
+      width: min-content;
+    }
+
+    &:disabled {
+      background-color: #1d3c6d69;
+      &:hover {
+        background-color: #1d3c6d69;
+        cursor: default;
+      }
+    }
+
+    &:hover {
+      background-color: #25457b;
+    }
+  }
+}
+
+.balance {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .wallet,
+  .transaction {
+    padding: 10px;
+  }
+
+  input,
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

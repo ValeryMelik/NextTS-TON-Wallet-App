@@ -1,40 +1,101 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# 🚀 TON Wallet & Transactions Web App
 
-First, run the development server:
+Это веб-приложение на основе Next.js и TonConnect SDK, которое позволяет пользователям привязывать криптовалютный кошелек TonKeeper, а также отправлять транзакции в сети TestNet TON.
+
+## 🛠 Стек технологий
+
+- **Next.js** — фреймворк React для создания серверных и статических веб-приложений.
+- **TonConnect SDK** — интеграция с TonKeeper для работы с криптокошельком TON.
+- **SASS** — стилизация компонентов с использованием препроцессора SASS.
+
+## 📑 Описание
+
+Приложение состоит из двух основных экранов:
+- **Кошелек**: возможность привязать кошелек и просмотреть баланс.
+- **Транзакции**: возможность отправить тестовую транзакцию на другой адрес.
+
+## 🌟 Особенности
+
+- 📲 **Привязка кошелька**: Подключение через TonKeeper с возможностью восстановления соединения.
+- 💸 **Проверка баланса**: Отображение баланса пользователя в сети TestNet.
+- 🔄 **Тестовые транзакции**: Эмуляция отправки TON на любой валидный адрес сети.
+- 📜 **Мобильная верстка**: Приложение адаптировано для мобильных устройств.
+
+## 📂 Структура проекта
+
+```bash
+📦 ton-wallet-app
+├── 📁 public                            # Публичные файлы
+│   ├── 📄 favicon.png                   # Иконка сайта
+│   ├── 📄 tonconnect-manifest.json      # Манифест TonConnect для идентификации приложения
+│   │
+├── 📁 src                               # Исходный код приложения
+│   ├── 📁 components                    # Компоненты React
+│   │   └── 📁 Loader                    # Анимация загрузки
+│   │       ├── 📄 Loader.tsx            # Компонент Loader
+│   │       ├── 📄 Loader.module.scss    # Стили для Loader
+│   │       └── 📄 index.ts              # Главный файл экспорта Loader
+│   │
+│   ├── 📁 pages                         # Страницы приложения
+│   │   ├── 📄 _app.tsx                  # Главный файл приложения
+│   │   ├── 📄 _document.tsx             # Настройка документа (HTML head)
+│   │   ├── 📄 index.tsx                 # Главная страница
+│   │   ├── 📄 transaction.tsx           # Страница транзакций
+│   │   └── 📄 wallet.tsx                # Страница подключения кошелька
+│   │
+│   ├── 📁 Providers                     # Провайдеры контекста
+│   │   └── 📄 WalletProvider.tsx        # Провайдер для управления состоянием кошелька
+│   │
+│   ├── 📁 styles                        # Глобальные и модульные стили
+│   │   ├── 📄 globals.scss              # Глобальные стили для всего приложения
+│   │   └── 📄 Home.module.scss          # Стили для главной страницы
+│   │
+├── 📄 .eslintrc.json                    # Настройки ESLint
+├── 📄 .gitignore                        # Игнорируемые Git файлы
+├── 📄 next.config.mjs                   # Конфигурация Next.js
+├── 📄 next-env.d.ts                     # Типы для Next.js
+├── 📄 package.json                      # Зависимости проекта
+├── 📄 README.md                         # Документация проекта
+└── 📄 tsconfig.json                     # Настройки TypeScript
+```
+
+## 🚀 Как запустить проект
+
+### 1. Клонируйте репозиторий:
+
+```bash
+git clone https://github.com/ValeryMelik/TON-Wallet-App.git
+cd ton-wallet-app
+```
+
+### 2. Установите зависимости:
+
+```bash
+npm install
+```
+
+### 3. Запустите проект:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. Перейдите по адресу:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 💼 Как пополнить баланс в TestNet
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Зайдите на сайт [ton.org/testnet-faucet](https://ton.org/testnet-faucet).
+2. Введите адрес вашего кошелька TonKeeper, чтобы получить тестовые монеты.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 📧 Связаться с автором
 
-## Learn More
+Если у вас возникли вопросы, можете связаться со мной по telegram: `https://t.me/ValeryMelik`.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+📝 **Примечание**: Приложение использует тестовую сеть TestNet. Реальные транзакции TON не отправляются.
