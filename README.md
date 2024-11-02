@@ -65,7 +65,7 @@
 ### 1. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/ValeryMelik/TON-Wallet-App.git
+git clone https://github.com/ValeryMelik/NextTS-TON-Wallet-App.git
 cd ton-wallet-app
 ```
 
